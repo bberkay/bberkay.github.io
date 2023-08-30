@@ -42,6 +42,7 @@ main #social .btn-dark{
     padding-top: 0.6rem;
     padding-bottom: 0.6rem;
     font-size: 0.9rem;
+    background-color:#252528;
 }
 
 @media (max-width: 569px) {
