@@ -8,9 +8,10 @@ body{
 .container{
     max-width:920px;
     padding:30px;
-    background-color:#18181b;
+    background-color:#000;
     border-left: 1px solid #2d2d2d;
     border-right: 1px solid #2d2d2d;
+    min-height:100vh;
 }
 
 main h1, h2, h3{
