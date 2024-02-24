@@ -1,17 +1,29 @@
 body{
     background-color: #000;
     width:100%;
-    height:1000px;
-    font-family: 'JetBrains Mono', monospace;
+    font-family: "IBM Plex Mono", monospace;
 }
 
 .container{
     max-width:920px;
-    padding:30px;
+    padding:0px;
     background-color:#000;
     border-left: 1px solid #2d2d2d;
     border-right: 1px solid #2d2d2d;
     min-height:100vh;
+}
+
+.line{
+    width:100%;
+    height:1px;
+    background-color: #2d2d2d;
+    margin: 1.5rem 0;
+}
+
+main section{
+    display:flex;
+    justify-content: center;
+    padding:0 25px;
 }
 
 main h1, h2, h3{
@@ -22,7 +34,13 @@ main h1, h2, h3{
 main p{
     color:#b1b1b1;
     line-height: 1.8;
-    margin-top: 1.5rem;
+}
+
+main #avatar span{
+    color:#a8a8a8;
+    font-size: 0.9rem;
+    margin-top: 0.5rem;
+    display: block;
 }
 
 main #social svg{
@@ -31,19 +49,26 @@ main #social svg{
     transition: 0.1s;
 }
 
+main #social a{
+    display:flex;
+    align-items:center;
+}
+
 main #social .btn-dark{
     border: 1px solid #2d2d2d;
+    border-radius: 0;
     color:#EAEAEA;
     padding-top: 0.6rem;
     padding-bottom: 0.6rem;
     font-size: 0.9rem;
-    background-color:#252528;
+    background-color:#000000;
     transition: 0.1s;
+    position: relative;
+    overflow: hidden;
 }
 
-main #social .btn-dark:hover svg{
-     color:#EAEAEA;
-     opacity: 1;
+main #social .btn-dark:hover{
+    filter:brightness(1.5);
 }
 
 @media (max-width: 569px) {
@@ -57,11 +82,9 @@ main #social .btn-dark:hover svg{
         flex-direction: column;
     }
 
-    main #social a{
-        margin-left: 0 !important;
-    }
-
     main #social .btn-dark{
         margin-top: 1rem;
+        margin-left: 0!important;
+        text-align: center!important;
     }
 }
