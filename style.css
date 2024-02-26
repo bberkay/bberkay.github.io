@@ -71,6 +71,16 @@ main #social .btn-dark:hover{
     filter:brightness(1.5);
 }
 
+@media (max-width: 768px) {
+    main #social{
+        flex-wrap: wrap;
+    }
+
+    main #social .btn-dark{
+        margin-bottom: 1rem;
+    }
+}
+
 @media (max-width: 569px) {
     .container{
         padding: 1.5rem!important;
@@ -83,8 +93,8 @@ main #social .btn-dark:hover{
     }
 
     main #social .btn-dark{
-        margin-top: 1rem;
-        margin-left: 0!important;
+        margin:0!important;
+        margin-top: 1rem!important;
         text-align: center!important;
     }
 }
