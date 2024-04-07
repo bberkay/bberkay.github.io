@@ -1,83 +1,84 @@
+/* General */
 body{
     background-color: #000;
     width:100%;
     font-family: "IBM Plex Mono", monospace;
 }
 
+::selection{
+    background-color: blue;
+    color:#fff;
+}
+
+/* Container */
 .container{
     max-width:920px;
     padding:0px;
     background-color:#000;
-    border-left: 1px solid #2d2d2d;
-    border-right: 1px solid #2d2d2d;
     min-height:100vh;
 }
 
-.line{
-    width:100%;
-    height:1px;
-    background-color: #2d2d2d;
-    margin: 1.5rem 0;
-}
-
-main section{
+section{
     display:flex;
-    justify-content: center;
     padding:0 25px;
+    margin-bottom:2rem;
 }
 
-main h1, h2, h3{
+h1, h2, h3{
     color:#EAEAEA;
     font-weight: bold!important;
 }
 
-main p{
+p{
     color:#b1b1b1;
     line-height: 1.8;
 }
 
-main #avatar span{
+#avatar span{
     color:#a8a8a8;
     font-size: 0.9rem;
     margin-top: 0.5rem;
     display: block;
 }
 
-main #social svg{
-    color:#a8a8a8;
-    opacity: 0.7;
-    transition: 0.1s;
-}
-
-main #social a{
-    display:flex;
-    align-items:center;
-}
-
-main #social .btn-dark{
-    border: 1px solid #2d2d2d;
-    border-radius: 0;
-    color:#EAEAEA;
-    padding-top: 0.6rem;
-    padding-bottom: 0.6rem;
-    font-size: 0.9rem;
-    background-color:#000000;
-    transition: 0.1s;
-    position: relative;
-    overflow: hidden;
-}
-
-main #social .btn-dark:hover{
-    filter:brightness(1.5);
-}
-
-@media (max-width: 768px) {
-    main #social{
-        flex-wrap: wrap;
+#social {
+    svg{
+        color:#a8a8a8;
+        opacity: 0.7;
+        transition: 0.1s;
     }
 
-    main #social .btn-dark{
-        margin-bottom: 1rem;
+    a{
+        display:flex;
+        align-items:center;
+    }
+
+    .btn-dark{
+        border: 1px solid #1B1B1B;
+        border-radius: 5px;
+        color:#EAEAEA;
+        padding-top: 0.6rem;
+        padding-bottom: 0.6rem;
+        font-size: 0.9rem;
+        background-color:#141414;
+        transition: 0.1s;
+        position: relative;
+        overflow: hidden;
+
+        &:hover{
+            filter:brightness(1.5);
+        }
+    }
+}
+
+/* Responsiveness */
+@media (max-width: 768px) {
+    #social{
+        flex-wrap: wrap;
+
+        .btn-dark{
+            margin-bottom: 1rem;
+        }
     }
 }
 
@@ -88,13 +89,13 @@ main #social .btn-dark:hover{
         padding-top:2rem!important;
     }
 
-    main #social{
+    #social{
         flex-direction: column;
-    }
 
-    main #social .btn-dark{
-        margin:0!important;
-        margin-top: 1rem!important;
-        text-align: center!important;
+        .btn-dark{
+            margin:0!important;
+            margin-top: 1rem!important;
+            text-align: center!important;
+        }
     }
 }
